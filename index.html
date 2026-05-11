@@ -64,6 +64,22 @@
         border-bottom: 1px solid var(--line);
       }
 
+      .identity {
+        display: grid;
+        grid-template-columns: 1fr 104px;
+        gap: 24px;
+        align-items: start;
+      }
+
+      .profile-photo {
+        width: 104px;
+        height: 104px;
+        border: 3px solid #d8dcc5;
+        border-radius: 999px;
+        box-shadow: 0 12px 28px rgb(47 54 22 / 18%);
+        object-fit: cover;
+      }
+
       .eyebrow {
         color: var(--gold);
         font-size: 11px;
@@ -336,6 +352,15 @@
           padding-inline: 24px;
         }
 
+        .identity {
+          grid-template-columns: 1fr;
+        }
+
+        .profile-photo {
+          width: 88px;
+          height: 88px;
+        }
+
         h1 {
           font-size: 38px;
         }
@@ -381,6 +406,18 @@
           gap: 9px;
           padding: 0 0 14px;
           background: #fff;
+        }
+
+        .identity {
+          grid-template-columns: 1fr 70px;
+          gap: 14px;
+        }
+
+        .profile-photo {
+          width: 70px;
+          height: 70px;
+          border-width: 2px;
+          box-shadow: none;
         }
 
         h1 {
@@ -523,16 +560,19 @@
   <body>
     <article class="sheet">
       <header class="hero">
-        <div>
-          <p class="eyebrow">Supercomputing infrastructure engineering</p>
-          <h1>Kenny Sheridan</h1>
-          <p class="title">Member of Technical Staff focused on infrastructure product, GPU clusters, Kubernetes, RDMA networking, workload placement, and AI infrastructure performance.</p>
-          <p class="summary">Infrastructure engineer with hands-on ownership across bare-metal GPU orchestration, distributed Kubernetes clusters, RoCE/InfiniBand networking, hardware lifecycle automation, monitoring, benchmarking, and workload-to-hardware matching. Experience spans medium-sized companies scaling into Fortune 500 operations and pre-seed through post-Series A startups valued from $300M to $1B. Former U.S. Marine Corps meteorology instructor with enterprise-scale ServiceNow experience and startup HPC delivery across NVIDIA and AMD accelerator platforms for AI/ML, robotics, edge, and datacenter workloads.</p>
-          <div class="metrics" aria-label="Career highlights">
-            <div class="metric"><strong>9,000+</strong><span>GPUs automated across providers and clusters</span></div>
-            <div class="metric"><strong>800G</strong><span>RoCE and InfiniBand GPU fabric experience</span></div>
-            <div class="metric"><strong>AI</strong><span>Training and inference workload placement</span></div>
+        <div class="identity">
+          <div>
+            <p class="eyebrow">Supercomputing infrastructure engineering</p>
+            <h1>Kenny Sheridan</h1>
+            <p class="title">Member of Technical Staff focused on infrastructure product, GPU clusters, Kubernetes, RDMA networking, workload placement, and AI infrastructure performance.</p>
+            <p class="summary">Infrastructure engineer with hands-on ownership across bare-metal GPU orchestration, distributed Kubernetes clusters, RoCE/InfiniBand networking, hardware lifecycle automation, monitoring, benchmarking, and workload-to-hardware matching. Experience spans medium-sized companies scaling into Fortune 500 operations and pre-seed through post-Series A startups valued from $300M to $1B. Former U.S. Marine Corps meteorology instructor with enterprise-scale ServiceNow experience and startup HPC delivery across NVIDIA and AMD accelerator platforms for AI/ML, robotics, edge, and datacenter workloads.</p>
           </div>
+          <img class="profile-photo" src="profile.jpg" alt="Kenny Sheridan" />
+        </div>
+        <div class="metrics" aria-label="Career highlights">
+          <div class="metric"><strong>9,000+</strong><span>GPUs automated across providers and clusters</span></div>
+          <div class="metric"><strong>800G</strong><span>RoCE and InfiniBand GPU fabric experience</span></div>
+          <div class="metric"><strong>AI</strong><span>Training and inference workload placement</span></div>
         </div>
         <address class="contact-card">
           <div class="contact-item">
