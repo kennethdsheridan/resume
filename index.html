@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kenny Sheridan Resume</title>
+    <meta name="description" content="Resume for Kenny Sheridan, systems engineering and architecture for accelerated infrastructure, AI/ML platforms, virtualization, and high-assurance delivery." />
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #17180f;
+        --muted: #5e6250;
+        --faint: #777b66;
+        --line: #d7d8c8;
+        --soft: #f3f3ea;
+        --paper: #fffdf4;
+        --accent: #4b5320;
+        --accent-dark: #2f3616;
+        --gold: #b08a37;
+        --olive-soft: #e8ead8;
+        --olive-chip: #eef1de;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background: #d9ddc9;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+        font-size: 13.5px;
+        line-height: 1.42;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: var(--accent);
+      }
+
+      .sheet {
+        width: min(100%, 980px);
+        margin: 30px auto;
+        background: var(--paper);
+        box-shadow: 0 28px 80px rgb(17 24 39 / 20%);
+      }
+
+      .hero {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding: 42px 48px 28px;
+        background:
+          linear-gradient(135deg, rgb(75 83 32 / 18%), transparent 40%),
+          linear-gradient(180deg, #fffdf4 0%, #f5f5ea 100%);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .eyebrow {
+        color: var(--gold);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        margin-top: 8px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 46px;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+        line-height: 0.95;
+      }
+
+      .title {
+        max-width: 620px;
+        margin-top: 12px;
+        color: var(--accent-dark);
+        font-size: 17px;
+        font-weight: 760;
+        letter-spacing: -0.02em;
+      }
+
+      .summary {
+        max-width: 760px;
+        margin-top: 14px;
+        color: #303849;
+        font-size: 14px;
+      }
+
+      .contact-card {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px 18px;
+        min-width: 0;
+        padding: 11px 14px;
+        background: rgb(255 255 255 / 72%);
+        border: 1px solid rgb(217 223 235 / 88%);
+        border-radius: 16px;
+      }
+
+      .contact-item {
+        display: flex;
+        gap: 6px;
+        align-items: baseline;
+        min-width: max-content;
+      }
+
+      .contact-label {
+        color: var(--faint);
+        font-size: 8.5px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .contact-value {
+        color: var(--ink);
+        font-size: 10.8px;
+        font-weight: 650;
+        line-height: 1.18;
+        min-width: 0;
+        white-space: nowrap;
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: 1fr 275px;
+        gap: 34px;
+        padding: 30px 48px 42px;
+      }
+
+      .section + .section {
+        margin-top: 24px;
+      }
+
+      h2 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 13px;
+        color: var(--accent-dark);
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      h2::after {
+        content: "";
+        height: 1px;
+        flex: 1;
+        background: var(--line);
+      }
+
+      h3 {
+        font-size: 15px;
+        line-height: 1.18;
+        letter-spacing: -0.015em;
+      }
+
+      .role,
+      .project {
+        position: relative;
+        padding-left: 18px;
+      }
+
+      .role::before,
+      .project::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 4px;
+        width: 7px;
+        height: 7px;
+        border: 2px solid var(--accent);
+        border-radius: 999px;
+        background: var(--paper);
+      }
+
+      .role + .role,
+      .project + .project {
+        margin-top: 18px;
+      }
+
+      .meta {
+        margin-top: 3px;
+        color: var(--muted);
+        font-size: 11.5px;
+        font-weight: 650;
+      }
+
+      ul {
+        margin: 8px 0 0;
+        padding-left: 17px;
+      }
+
+      li {
+        margin: 4px 0;
+        padding-left: 2px;
+      }
+
+      li::marker {
+        color: var(--accent);
+      }
+
+      .project p:last-child {
+        margin-top: 5px;
+        color: #303849;
+      }
+
+      .rail {
+        display: grid;
+        gap: 14px;
+        align-content: start;
+      }
+
+      .card {
+        padding: 15px;
+        background: #ffffffbd;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+      }
+
+      .card h2 {
+        margin-bottom: 10px;
+      }
+
+      .card h2::after {
+        display: none;
+      }
+
+      .pill-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .pill {
+        padding: 5px 8px;
+        background: var(--olive-chip);
+        border: 1px solid #d9ddbd;
+        border-radius: 999px;
+        color: #303816;
+        font-size: 11px;
+        font-weight: 760;
+      }
+
+      .compact {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .compact li {
+        margin: 0;
+        padding: 0;
+      }
+
+      .compact li + li {
+        margin-top: 8px;
+      }
+
+      .strong-line {
+        color: var(--ink);
+        font-weight: 820;
+      }
+
+      .subline {
+        display: block;
+        margin-top: 1px;
+        color: var(--muted);
+        font-size: 11.5px;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        max-width: 760px;
+        margin-top: 0;
+      }
+
+      .metric {
+        padding: 12px;
+        background: #ffffffd6;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+      }
+
+      .metric strong {
+        display: block;
+        color: var(--accent-dark);
+        font-size: 18px;
+        line-height: 1;
+      }
+
+      .metric span {
+        display: block;
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 10.5px;
+        font-weight: 680;
+      }
+
+      .note {
+        padding: 0 48px 26px;
+        color: var(--faint);
+        font-size: 10.5px;
+      }
+
+      @media (max-width: 820px) {
+        .sheet {
+          margin: 0;
+        }
+
+        .hero,
+        .content {
+          grid-template-columns: 1fr;
+          padding-inline: 24px;
+        }
+
+        h1 {
+          font-size: 38px;
+        }
+
+        .metrics {
+          grid-template-columns: 1fr;
+        }
+
+        .note {
+          padding-inline: 24px;
+        }
+      }
+
+      @page {
+        size: letter;
+        margin: 0.35in;
+      }
+
+      @media print {
+        html,
+        body {
+          background: #fff;
+        }
+
+        body {
+          font-size: 10.7px;
+          line-height: 1.29;
+          print-color-adjust: exact;
+          -webkit-print-color-adjust: exact;
+        }
+
+        a {
+          color: inherit;
+        }
+
+        .sheet {
+          width: auto;
+          margin: 0;
+          box-shadow: none;
+        }
+
+        .hero {
+          gap: 9px;
+          padding: 0 0 14px;
+          background: #fff;
+        }
+
+        h1 {
+          font-size: 31px;
+        }
+
+        .title {
+          margin-top: 7px;
+          font-size: 12.5px;
+        }
+
+        .summary {
+          margin-top: 8px;
+          font-size: 10.8px;
+          max-width: none;
+        }
+
+        .contact-card,
+        .card,
+        .metric {
+          background: #fff;
+          border-color: #d5dbe7;
+          border-radius: 10px;
+        }
+
+        .contact-card {
+          gap: 4px 10px;
+          padding: 6px 8px;
+          border-radius: 8px;
+        }
+
+        .contact-item {
+          gap: 4px;
+        }
+
+        .contact-label {
+          font-size: 6.6px;
+        }
+
+        .contact-value {
+          font-size: 7.8px;
+        }
+
+        .content {
+          grid-template-columns: 1fr 220px;
+          gap: 20px;
+          padding: 15px 0 0;
+        }
+
+        .section + .section {
+          margin-top: 13px;
+        }
+
+        h2 {
+          margin-bottom: 7px;
+          font-size: 8.2px;
+        }
+
+        h3 {
+          font-size: 10.8px;
+        }
+
+        .meta {
+          font-size: 8.8px;
+        }
+
+        ul {
+          margin-top: 4px;
+          padding-left: 13px;
+        }
+
+        li {
+          margin: 2px 0;
+        }
+
+        .role,
+        .project {
+          padding-left: 12px;
+        }
+
+        .role::before,
+        .project::before {
+          width: 5px;
+          height: 5px;
+          border-width: 1.5px;
+        }
+
+        .role + .role,
+        .project + .project,
+        .card + .card {
+          margin-top: 8px;
+        }
+
+        .rail {
+          gap: 8px;
+        }
+
+        .card {
+          padding: 9px;
+        }
+
+        .pill {
+          padding: 3px 5px;
+          font-size: 8px;
+        }
+
+        .compact li + li {
+          margin-top: 5px;
+        }
+
+        .subline {
+          font-size: 8.8px;
+        }
+
+        .metrics {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 7px;
+          max-width: none;
+          margin-top: 0;
+        }
+
+        .metric {
+          padding: 8px;
+        }
+
+        .metric strong {
+          font-size: 13px;
+        }
+
+        .metric span {
+          font-size: 7.8px;
+        }
+
+        .note {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article class="sheet">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Supercomputing infrastructure engineering</p>
+          <h1>Kenny Sheridan</h1>
+          <p class="title">Member of Technical Staff focused on infrastructure product, GPU clusters, Kubernetes, RDMA networking, workload placement, and AI infrastructure performance.</p>
+          <p class="summary">Infrastructure engineer with hands-on ownership across bare-metal GPU orchestration, distributed Kubernetes clusters, RoCE/InfiniBand networking, hardware lifecycle automation, monitoring, benchmarking, and workload-to-hardware matching. Former U.S. Marine Corps meteorology instructor with enterprise-scale ServiceNow experience and startup HPC delivery across NVIDIA and AMD accelerator platforms for AI/ML, robotics, edge, and datacenter workloads.</p>
+          <div class="metrics" aria-label="Career highlights">
+            <div class="metric"><strong>9,000+</strong><span>GPUs automated across providers and clusters</span></div>
+            <div class="metric"><strong>800G</strong><span>RoCE and InfiniBand GPU fabric experience</span></div>
+            <div class="metric"><strong>AI</strong><span>Training and inference workload placement</span></div>
+          </div>
+        </div>
+        <address class="contact-card">
+          <div class="contact-item">
+            <span class="contact-label">Location</span>
+            <span class="contact-value">Seattle, WA</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Phone</span>
+            <a class="contact-value" href="tel:+12535094517">253-509-4517</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Email</span>
+            <a class="contact-value" href="mailto:kennethdashensheridan@gmail.com">kennethdashensheridan@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">GitHub</span>
+            <a class="contact-value" href="https://github.com/kennethdsheridan">github.com/kennethdsheridan</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Forgejo</span>
+            <a class="contact-value" href="https://forgejo.kennysheridan.io">forgejo.kennysheridan.io</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">LinkedIn</span>
+            <a class="contact-value" href="https://www.linkedin.com/in/kennethdashensheridan/">linkedin.com/in/kennethdashensheridan</a>
+          </div>
+        </address>
+      </header>
+
+      <main class="content">
+        <div>
+          <section class="section">
+            <h2>Experience</h2>
+            <div class="role">
+              <h3>Member of Technical Staff - Infrastructure Product | Andromeda</h3>
+              <p class="meta">Greater Seattle Area, Remote | March 2026 - Present | Website: <a href="https://www.andromeda.ai">andromeda.ai</a></p>
+              <ul>
+                <li>Build and scale reproducible high-performance AI infrastructure reliably matched to model training and inference workloads.</li>
+                <li>Automate observability and deployment for 9,000+ GPUs across over a dozen globally distributed providers and clusters supporting training and inference capacity for AI/ML, robotics, edge, and datacenter workloads.</li>
+                <li>Develop bare-metal GPU orchestration, hardware lifecycle workflows, distributed control planes, and developer-facing platforms for maintainable infrastructure product delivery.</li>
+                <li>Create rich product documentation for customer-facing infrastructure workflows, designed for online hosting, mobile viewing, and clear operational adoption.</li>
+                <li>Design virtualization and multi-tenant compute isolation patterns that make large-scale GPU infrastructure safer, more repeatable, and commercially usable.</li>
+                <li>Drive performance engineering, real-world benchmarking, longitudinal system modeling, monitoring, and workload placement so the right models land on the right hardware.</li>
+              </ul>
+            </div>
+
+            <div class="role">
+              <h3>Senior Supercomputing Infrastructure Engineer | San Francisco Compute Company</h3>
+              <p class="meta">San Francisco, CA | September 2024 - Present | Website: <a href="https://sfcompute.com">sfcompute.com</a></p>
+              <ul>
+                <li>Led automated bring-up for 2,000 NVIDIA H100 GPUs, moving bare metal into operational Kubernetes clusters through a single-command Rust-based deployment workflow.</li>
+                <li>Scaled onboarding from 8 nodes to hundreds of GPU nodes within weeks by eliminating manual provisioning steps across hardware, networking, and company infrastructure integration.</li>
+                <li>Deploy distributed supercomputing infrastructure globally for GPU marketplace capacity, with emphasis on scalable utilization, reliability, and operational repeatability.</li>
+                <li>Optimize compute, network, and storage layers for large-scale AI and HPC workloads, including real-time troubleshooting and root-cause analysis across distributed systems.</li>
+                <li>Build performance testing suites and custom Kubernetes controllers/operators for bare-metal GPU cluster orchestration, resource management, and near-metal performance validation.</li>
+              </ul>
+            </div>
+
+            <div class="role">
+              <h3>Senior AI and HPC Infrastructure Engineer | TensorWave</h3>
+              <p class="meta">Las Vegas, NV | May 2024 - July 2024 | Website: <a href="https://tensorwave.com">tensorwave.com</a></p>
+              <ul>
+                <li>Architected on-premises AMD MI300X GPU clusters using EPYC CPUs and RDMA over Converged Ethernet on traditional TCP/IP networks.</li>
+                <li>Benchmarked NVIDIA InfiniBand and AMD RoCE designs, including high-bandwidth all_reduce testing over 800G switching infrastructure.</li>
+                <li>Designed vendor-agnostic AI/ML infrastructure patterns capable of scaling toward hundreds of nodes while reducing accelerator lock-in.</li>
+                <li>Created reproducible deployment documentation for high-performance GPU cluster setup, configuration, and operational handoff.</li>
+              </ul>
+            </div>
+
+            <div class="role">
+              <h3>Senior Hardware Infrastructure Automation Engineer | ServiceNow</h3>
+              <p class="meta">Kirkland, WA | February 2022 - December 2023 | Website: <a href="https://www.servicenow.com">servicenow.com</a></p>
+              <ul>
+                <li>Engineered HPC system testing software for distributed enterprise infrastructure, including stress validation, benchmarking, and reliability assessment workflows.</li>
+                <li>Led migration of internal automation from Python and Bash to Go, improving efficiency across heterogeneous hardware environments.</li>
+                <li>Built Redfish-based hardware SKU auditing and NIC performance tooling for asset validation, 25G/50G/100G/200G Ethernet testing, and backend infrastructure assurance.</li>
+                <li>Managed GitLab CI/CD pipelines for cross-department hardware-software co-design, validation, and verification.</li>
+              </ul>
+            </div>
+
+            <div class="role">
+              <h3>Senior Cloud Hardware Performance Test Engineer | ServiceNow</h3>
+              <p class="meta">Kirkland, WA | May 2017 - February 2022 | Website: <a href="https://www.servicenow.com">servicenow.com</a></p>
+              <ul>
+                <li>Led cloud hardware performance testing across storage, networking, BIOS, firmware, PCIe devices, FPGAs, NVMe, SAS/SATA, and Linux filesystems.</li>
+                <li>Collaborated with ODMs, system engineers, CTO stakeholders, product teams, and cross-functional groups to refine infrastructure component roadmaps and specifications.</li>
+                <li>Trained three junior engineers and a mid-level manager while improving onboarding, agile practices, and test methodology consistency.</li>
+              </ul>
+            </div>
+
+            <div class="role">
+              <h3>System Administrator | NexLevel Information Technology</h3>
+              <p class="meta">Sacramento, CA | August 2015 - May 2017 | Website: <a href="https://nexlevelit.com">nexlevelit.com</a></p>
+              <ul>
+                <li>Provided Tier 3 Unix and Windows server support for biometric capture and analysis systems serving 300+ remote clients.</li>
+                <li>Recovered critical state records from a compromised storage array, preserving SLA compliance and avoiding substantial penalties.</li>
+                <li>Built monitoring scripts and baseline configuration improvements to reduce downtime and stabilize production infrastructure.</li>
+              </ul>
+            </div>
+
+            <div class="role">
+              <h3>Technical Instructor of Meteorology | U.S. Marine Corps</h3>
+              <p class="meta">Quantico, VA | May 2007 - June 2015 | Website: <a href="https://www.marines.mil">marines.mil</a></p>
+              <ul>
+                <li>Administered two modular data centers and maintained METMF(R) computing infrastructure supporting mission-critical weather forecasting operations.</li>
+                <li>Virtualized Windows instructional environments with VMware, managed WAN-connected remote sensing sites, and deployed Solaris-based mobile weather radar units.</li>
+                <li>Produced 300+ surface weather observations, 100+ 96-hour forecasts, and 50+ weather warnings cited in Navy and Marine Corps Achievement Medal recognition.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>Selected Engineering Work</h2>
+            <div class="project">
+              <h3>Multi-cluster HPC observability platform</h3>
+              <p class="meta">Rust | Prometheus | Grafana | HPC workloads | Infrastructure monitoring</p>
+              <p>Custom-built single-pane-of-glass observability system for multi-cluster HPC workloads and infrastructure, designed to integrate with Prometheus and Grafana workflows.</p>
+            </div>
+            <div class="project">
+              <h3>Automated GPU bring-up and onboarding</h3>
+              <p class="meta">Rust | Kubernetes | Bare metal | NVIDIA H100</p>
+              <p>Single-command workflow that deploys hardware, joins company infrastructure, configures networking, and removes manual intervention from large-scale GPU node onboarding.</p>
+            </div>
+            <div class="project">
+              <h3>Multi-node GPU cluster networking</h3>
+              <p class="meta">AMD MI300X | NVIDIA | RoCE | InfiniBand | 800G fabrics</p>
+              <p>Designed vendor-agnostic topologies across AMD and NVIDIA accelerators, including RoCE on TCP/IP networks and InfiniBand benchmarking for large-scale AI/HPC clusters.</p>
+            </div>
+            <div class="project">
+              <h3>LLM and HPC benchmarking CLI</h3>
+              <p class="meta">Rust | MPI | PyTorch | DeepSeek-R1 | NVIDIA and AMD GPUs</p>
+              <p>Resource-efficient benchmarking application for rapid system characterization across InfiniBand, LLM workloads, and heterogeneous GPU infrastructure.</p>
+            </div>
+            <div class="project">
+              <h3><a href="https://github.com/sfcompute/hardware_report">hardware_report</a></h3>
+              <p class="meta">Rust | San Francisco Compute Company | Hardware, orchestration, virtualization</p>
+              <p>Produces serialized hardware reports for physical infrastructure automation, supporting host introspection, inventory, scheduling inputs, and orchestration workflows.</p>
+            </div>
+            <div class="project">
+              <h3><a href="https://github.com/kennethdsheridan/rocm_gpu_tradecraft">rocm_gpu_tradecraft</a></h3>
+              <p class="meta">ROCm | GPU operations and command tradecraft</p>
+              <p>Operational reference for engineers working with AMD ROCm tooling, GPU validation, and accelerated compute environments.</p>
+            </div>
+          </section>
+        </div>
+
+        <aside class="rail">
+          <section class="card">
+            <h2>Core Stack</h2>
+            <div class="pill-grid">
+              <span class="pill">Linux</span>
+              <span class="pill">Rust</span>
+              <span class="pill">Nix</span>
+              <span class="pill">QEMU</span>
+              <span class="pill">KVM</span>
+              <span class="pill">Kubernetes</span>
+              <span class="pill">Operators</span>
+              <span class="pill">GitOps</span>
+              <span class="pill">Argo CD</span>
+              <span class="pill">Bare metal</span>
+              <span class="pill">Redfish</span>
+              <span class="pill">NVIDIA H100</span>
+              <span class="pill">AMD MI300X</span>
+              <span class="pill">CUDA</span>
+              <span class="pill">ROCm</span>
+              <span class="pill">NCCL</span>
+              <span class="pill">RoCE</span>
+              <span class="pill">InfiniBand</span>
+              <span class="pill">SONiC</span>
+              <span class="pill">SDN</span>
+              <span class="pill">Tailscale</span>
+              <span class="pill">Netmaker</span>
+              <span class="pill">NVMe</span>
+              <span class="pill">Virtualization</span>
+              <span class="pill">Multi-tenant isolation</span>
+              <span class="pill">OpenTelemetry</span>
+              <span class="pill">Prometheus</span>
+              <span class="pill">Grafana</span>
+              <span class="pill">FIO</span>
+              <span class="pill">iperf3</span>
+              <span class="pill">stress-ng</span>
+              <span class="pill">MPI</span>
+              <span class="pill">PyTorch</span>
+              <span class="pill">Edge systems</span>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>Strengths</h2>
+            <ul class="compact">
+              <li><span class="strong-line">Infrastructure product</span><span class="subline">Developer-facing platforms and customer docs that make large-scale GPU infrastructure maintainable and profitable.</span></li>
+              <li><span class="strong-line">GPU cluster orchestration</span><span class="subline">Bare-metal automation across large NVIDIA and AMD fleets.</span></li>
+              <li><span class="strong-line">Network and storage IO</span><span class="subline">RoCE, InfiniBand, SONiC, NVMe, all-flash arrays, and Linux filesystem performance.</span></li>
+              <li><span class="strong-line">Workload matching</span><span class="subline">Place training and inference workloads on the right hardware based on benchmark evidence.</span></li>
+              <li><span class="strong-line">Validation-first engineering</span><span class="subline">Benchmark, stress, profile, model, and prove infrastructure over time.</span></li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <h2>Open Source</h2>
+            <ul class="compact">
+              <li><span class="strong-line">Forgejo portfolio</span><span class="subline">Self-hosted forge for systems architecture and private/public engineering work.</span></li>
+              <li><span class="strong-line">GitHub profile</span><span class="subline">Public Rust, Nix, GPU, MCP, and developer tooling repositories.</span></li>
+              <li><span class="strong-line">Neovim tooling</span><span class="subline">Lua-based personal and professional editor configuration used since 2015.</span></li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <h2>Education</h2>
+            <ul class="compact">
+              <li><span class="strong-line">Air University / Community College of the Air Force</span><span class="subline">Keesler AFB | 62 credits in meteorology, forecasting, and atmospheric physics</span></li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <h2>Certifications</h2>
+            <ul class="compact">
+              <li><span class="strong-line">Introduction to Blockchain</span><span class="subline">Amazon Web Services, 2021</span></li>
+              <li><span class="strong-line">Basic Instructor Course</span><span class="subline">Community College of the Air Force, 2012</span></li>
+              <li><span class="strong-line">Meteorology and Oceanography Analyst Forecaster</span><span class="subline">Community College of the Air Force, 2008</span></li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <h2>Recognition</h2>
+            <ul class="compact">
+              <li>Navy and Marine Corps Achievement Medal</li>
+              <li>Good Conduct Medal</li>
+              <li>Letter of Appreciation, Director of Meteorology</li>
+            </ul>
+          </section>
+        </aside>
+      </main>
+
+      <p class="note">Export tip: open this file in a browser, print, choose "Save to PDF", and enable background graphics. Verify exact current title and dates before external submission.</p>
+    </article>
+  </body>
+</html>
