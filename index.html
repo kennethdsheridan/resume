@@ -272,6 +272,28 @@
         gap: 6px;
       }
 
+      .skill-list {
+        display: grid;
+        gap: 6px;
+      }
+
+      .skill-row {
+        display: grid;
+        grid-template-columns: 72px 1fr;
+        gap: 8px;
+        align-items: baseline;
+        color: #313b25;
+        font-size: 11px;
+        line-height: 1.25;
+      }
+
+      .skill-row strong {
+        color: var(--accent-dark);
+        font-size: 9px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
       .pill {
         padding: 5px 8px;
         background: var(--olive-chip);
@@ -532,6 +554,21 @@
           font-size: 8px;
         }
 
+        .skill-list {
+          gap: 4px;
+        }
+
+        .skill-row {
+          grid-template-columns: 48px 1fr;
+          gap: 5px;
+          font-size: 8px;
+          line-height: 1.18;
+        }
+
+        .skill-row strong {
+          font-size: 6.5px;
+        }
+
         .compact li + li {
           margin-top: 5px;
         }
@@ -740,35 +777,20 @@
         <aside class="rail">
           <section class="card">
             <h2>Skills</h2>
-            <div class="pill-grid">
-              <span class="pill">Linux</span>
-              <span class="pill">Rust</span>
-              <span class="pill">Go</span>
-              <span class="pill">Bash</span>
-              <span class="pill">Nix packaging</span>
-              <span class="pill">QEMU/KVM</span>
-              <span class="pill">Kubernetes operators</span>
-              <span class="pill">GitOps / Argo CD</span>
-              <span class="pill">Agentic workflows</span>
-              <span class="pill">Agentic harnesses</span>
-              <span class="pill">MCP</span>
-              <span class="pill">Raft reconciliation</span>
-              <span class="pill">Embedded databases</span>
-              <span class="pill">Bare metal / Redfish</span>
-              <span class="pill">NVIDIA H100</span>
-              <span class="pill">AMD MI300X</span>
-              <span class="pill">CUDA / ROCm / NCCL</span>
-              <span class="pill">RoCE / InfiniBand</span>
-              <span class="pill">NVMe-oF</span>
-              <span class="pill">SONiC / SDN</span>
-              <span class="pill">Tailscale / Netmaker</span>
-              <span class="pill">SmartNICs</span>
-              <span class="pill">Smart Storage cards</span>
-              <span class="pill">Weka / VAST / Ceph</span>
-              <span class="pill">OpenTelemetry</span>
-              <span class="pill">Prometheus / Grafana</span>
-              <span class="pill">FIO / iperf3 / stress-ng</span>
-              <span class="pill">MPI / PyTorch</span>
+            <div class="skill-list">
+              <div class="skill-row"><strong>Code</strong><span>Linux, Rust, Go, Bash</span></div>
+              <div class="skill-row"><strong>Build</strong><span>Nix packaging, QEMU/KVM</span></div>
+              <div class="skill-row"><strong>Control</strong><span>Kubernetes operators, GitOps, Argo CD</span></div>
+              <div class="skill-row"><strong>Agentic</strong><span>Workflows, harnesses, MCP</span></div>
+              <div class="skill-row"><strong>Data</strong><span>Raft reconciliation, embedded databases</span></div>
+              <div class="skill-row"><strong>Hardware</strong><span>Bare metal, Redfish, H100, MI300X</span></div>
+              <div class="skill-row"><strong>GPU</strong><span>CUDA, ROCm, NCCL</span></div>
+              <div class="skill-row"><strong>Fabric</strong><span>RoCE, InfiniBand, NVMe-oF, SONiC, SDN</span></div>
+              <div class="skill-row"><strong>Overlay</strong><span>Tailscale, Netmaker</span></div>
+              <div class="skill-row"><strong>Offload</strong><span>SmartNICs, Smart Storage cards</span></div>
+              <div class="skill-row"><strong>Storage</strong><span>Weka, VAST, Ceph</span></div>
+              <div class="skill-row"><strong>Telemetry</strong><span>OpenTelemetry, Prometheus, Grafana</span></div>
+              <div class="skill-row"><strong>Perf</strong><span>FIO, iperf3, stress-ng, MPI, PyTorch</span></div>
             </div>
           </section>
 
