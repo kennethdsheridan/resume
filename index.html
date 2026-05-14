@@ -612,7 +612,7 @@
             <p class="title">Infrastructure Product Engineer for AI, robotics, edge, agentic workflows, and supercomputing systems.</p>
           <div class="summary">
             <p>Systems engineer with 10+ years of experience turning complex infrastructure into production-ready platforms.</p>
-            <p>I build and evaluate reproducible AI, robotics, edge, and datacenter systems for agentic workloads, including offline AI and HPC for regulated or contested environments, bare-metal GPU orchestration, Kubernetes control planes, distributed Raft-backed reconciliation loops, high-performance networking and storage, QEMU/KVM sandboxing, observability, benchmarking, workload-to-hardware matching, and technical stack/infrastructure viability assessments.</p>
+            <p>I build and evaluate reproducible AI-first, robotics, edge, and datacenter systems for agentic workloads, including offline AI and HPC for regulated or contested environments, bare-metal GPU orchestration, Kubernetes control planes, distributed Raft-backed reconciliation loops, high-performance networking and storage, QEMU/KVM sandboxing, observability, benchmarking, workload-to-hardware matching, and technical stack/infrastructure viability assessments.</p>
             <p>My experience spans medium-sized companies scaling into Fortune 500 operations, as well as pre-seed through post-Series A startups valued from $300M to $1B. I work well in startup environments where priorities change quickly and ideas need to become shipped systems without losing reliability or technical depth. I’m a former U.S. Marine Corps meteorology instructor with hands-on HPC delivery experience across NVIDIA and AMD platforms for AI/ML, robotics, edge, simulation, and datacenter workloads.</p>
           </div>
           </div>
@@ -655,13 +655,14 @@
               <h3>Member of Technical Staff - Infrastructure Product | Andromeda</h3>
               <p class="meta">Greater Seattle Area, Remote | March 2026 - Present | Website: <a href="https://www.andromeda.ai">andromeda.ai</a></p>
               <ul>
-                <li>Build production AI infrastructure reliably matched to model training and inference workloads.</li>
-                <li>Automate observability and deployment for 9,000+ GPUs across over a dozen globally distributed providers and clusters supporting training and inference capacity for AI/ML, robotics, edge, and datacenter workloads.</li>
-                <li>Develop bare-metal GPU orchestration, hardware lifecycle workflows, distributed control planes, and developer-facing platforms for maintainable infrastructure product delivery.</li>
-                <li>Use Nix to build reproducible, secure package and deployment environments; use QEMU/KVM for sandboxing, isolation, and repeatable infrastructure validation.</li>
-                <li>Create rich product documentation for customer-facing infrastructure workflows, designed for online hosting, mobile viewing, and clear operational adoption.</li>
-                <li>Design virtualization and multi-tenant compute isolation patterns that make large-scale GPU infrastructure safer, more repeatable, and commercially usable.</li>
-                <li>Drive performance engineering, longitudinal system modeling, cache strategy, storage evaluation, offload analysis, and workload placement so the right models land on the right hardware and serve quickly.</li>
+                <li>Serve as a senior product-engineering contributor shaping AI-first infrastructure product direction across robotics, edge, Kubernetes, observability, platform delivery, and customer-facing workflows.</li>
+                <li>Delivered 2 major infrastructure products on compressed iteration cycles, translating ambiguous product and infrastructure requirements into shipped systems, automation, and operational patterns.</li>
+                <li>Operate at 9,000+ GPU scale across over a dozen globally distributed providers and clusters supporting training and inference capacity for AI/ML, robotics, edge, and datacenter workloads.</li>
+                <li>Drive Kubernetes platform work beyond observability, including deployment workflows, control-plane integration, cluster operations, developer experience, and productized infrastructure paths.</li>
+                <li>Create rich Kubernetes and infrastructure product documentation for customer-facing workflows, designed for online hosting, mobile viewing, and clear operational adoption.</li>
+                <li>Develop bare-metal GPU orchestration, hardware lifecycle workflows, distributed control planes, virtualization patterns, and multi-tenant compute isolation for commercially usable infrastructure products.</li>
+                <li>Use Nix, Kubernetes, and QEMU/KVM to build reproducible package, sandboxing, isolation, deployment, and repeatable infrastructure validation environments.</li>
+                <li>Guide performance engineering, system modeling, cache strategy, storage evaluation, offload analysis, and workload placement so products reach market quickly without losing operational reliability.</li>
               </ul>
             </div>
 
@@ -670,10 +671,11 @@
               <p class="meta">Greater Seattle Area, Remote | September 2024 - March 2026 | Website: <a href="https://sfcompute.com">sfcompute.com</a></p>
               <ul>
                 <li>Led automated bring-up for 2,000 NVIDIA H100 GPUs, moving bare metal into operational Kubernetes clusters through a single-command Rust-based deployment workflow.</li>
-                <li>Scaled onboarding from 8 nodes to hundreds of GPU nodes within weeks by eliminating manual provisioning steps across hardware, networking, and company infrastructure integration.</li>
+                <li>Scaled onboarding from 8 nodes to hundreds of GPU nodes within weeks, reducing product iteration time by eliminating manual provisioning across hardware, networking, and company infrastructure integration.</li>
                 <li>Deployed distributed supercomputing infrastructure globally for GPU marketplace capacity, with emphasis on scalable utilization, reliability, and operational repeatability.</li>
-                <li>Optimized compute, SDN, network fabric, and high-performance storage for large-scale AI and HPC workloads.</li>
-                <li>Built performance testing suites and custom Kubernetes controllers/operators for bare-metal clusters, resource management, near-metal validation, and repeatable systems setup.</li>
+                <li>Built and open-sourced Rust tooling for serialized infrastructure inventory plus object-storage and network throughput profiling across bare-metal AI/HPC environments.</li>
+                <li>Designed a private Linux-side hardware discovery and lifecycle agent for bare-metal fleet introspection, host validation, and infrastructure control-plane integration.</li>
+                <li>Optimized compute, SDN, network fabric, high-performance storage, performance testing, custom Kubernetes controllers/operators, resource management, near-metal validation, and repeatable systems setup.</li>
               </ul>
             </div>
 
@@ -734,9 +736,9 @@
               <p>Set up deterministic infrastructure environments that use Nix for secure packages, QEMU/KVM for sandboxed validation, and caching strategies to serve AI models quickly.</p>
             </div>
             <div class="project">
-              <h3>Multi-cluster HPC observability platform</h3>
-              <p class="meta">Rust | Prometheus | Grafana | HPC workloads | Infrastructure monitoring</p>
-              <p>Custom-built single-pane-of-glass observability system for multi-cluster HPC workloads and infrastructure, designed to integrate with Prometheus and Grafana workflows.</p>
+              <h3>AI-first infrastructure product delivery</h3>
+              <p class="meta">Kubernetes | Product engineering | Observability | GPU platforms</p>
+              <p>Delivered customer-facing and internal infrastructure products at 9,000+ GPU scale, balancing fast iteration, operational adoption, Kubernetes platform work, and production reliability.</p>
             </div>
             <div class="project">
               <h3>Automated GPU bring-up and onboarding</h3>
@@ -744,14 +746,19 @@
               <p>Single-command workflow that deploys hardware, joins company infrastructure, configures networking, and removes manual intervention from large-scale GPU node onboarding.</p>
             </div>
             <div class="project">
+              <h3>Infrastructure inventory and throughput profiling</h3>
+              <p class="meta">Rust | Hardware inventory | Object storage | Network profiling</p>
+              <p>Built public tooling for serialized hardware reports and portable object-storage and network throughput profiling, supporting faster validation across bare-metal AI/HPC fleets.</p>
+            </div>
+            <div class="project">
+              <h3>Bare-metal lifecycle agent</h3>
+              <p class="meta">Rust | Linux agents | Hardware discovery | Control-plane integration</p>
+              <p>Designed private host-side agent work for hardware discovery, lifecycle state, fleet validation, and integration with infrastructure control planes.</p>
+            </div>
+            <div class="project">
               <h3>Multi-node GPU cluster networking</h3>
               <p class="meta">AMD MI300X | NVIDIA | RoCE | InfiniBand | 800G fabrics</p>
               <p>Designed vendor-agnostic topologies across AMD and NVIDIA accelerators, including RoCE on TCP/IP networks and InfiniBand benchmarking for large-scale AI/HPC clusters.</p>
-            </div>
-            <div class="project">
-              <h3>LLM and HPC benchmarking CLI</h3>
-              <p class="meta">Rust | MPI | PyTorch | DeepSeek-R1 | NVIDIA and AMD GPUs</p>
-              <p>Resource-efficient benchmarking application for rapid system characterization across InfiniBand, LLM workloads, and heterogeneous GPU infrastructure.</p>
             </div>
           </section>
         </div>
