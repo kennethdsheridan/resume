@@ -8,17 +8,20 @@
     <style>
       :root {
         color-scheme: light;
-        --ink: #17180f;
-        --muted: #5e6250;
-        --faint: #777b66;
-        --line: #d7d8c8;
-        --soft: #f3f3ea;
-        --paper: #fffdf4;
-        --accent: #4b5320;
-        --accent-dark: #2f3616;
-        --gold: #b08a37;
-        --olive-soft: #e8ead8;
-        --olive-chip: #eef1de;
+        --ink: #15140f;
+        --muted: #625c50;
+        --faint: #8a8171;
+        --line: #ded5c3;
+        --line-strong: #c6b58f;
+        --soft: #f5efe3;
+        --paper: #fffaf0;
+        --panel: #fbf4e8;
+        --accent: #232018;
+        --accent-dark: #11100c;
+        --gold: #b8862d;
+        --blueprint: #55757b;
+        --olive-soft: #ece8d4;
+        --olive-chip: #ece8d4;
       }
 
       * {
@@ -26,7 +29,10 @@
       }
 
       html {
-        background: #d9ddc9;
+        background:
+          radial-gradient(circle at top left, rgb(184 134 45 / 18%), transparent 30rem),
+          radial-gradient(circle at 80% 12%, rgb(85 117 123 / 12%), transparent 28rem),
+          #e7dfcf;
       }
 
       body {
@@ -47,21 +53,52 @@
       }
 
       .sheet {
+        position: relative;
+        overflow: hidden;
         width: min(100%, 980px);
         margin: 30px auto;
         background: var(--paper);
-        box-shadow: 0 28px 80px rgb(17 24 39 / 20%);
+        border: 1px solid rgb(198 181 143 / 55%);
+        box-shadow: 0 28px 80px rgb(17 16 12 / 18%);
+      }
+
+      .sheet::before {
+        content: "SYSTEMS / AI / ROBOTICS";
+        position: absolute;
+        top: 112px;
+        right: -42px;
+        z-index: 0;
+        color: rgb(184 134 45 / 7%);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 58px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+        line-height: 0.9;
+        pointer-events: none;
+        text-align: right;
+        transform: rotate(-90deg);
+        transform-origin: top right;
       }
 
       .hero {
+        position: relative;
+        z-index: 1;
         display: flex;
         flex-direction: column;
-        gap: 18px;
+        gap: 16px;
         padding: 42px 48px 28px;
         background:
-          linear-gradient(135deg, rgb(75 83 32 / 18%), transparent 40%),
-          linear-gradient(180deg, #fffdf4 0%, #f5f5ea 100%);
-        border-bottom: 1px solid var(--line);
+          linear-gradient(135deg, rgb(184 134 45 / 16%), transparent 38%),
+          linear-gradient(180deg, #fffaf0 0%, #f4ead8 100%);
+        border-bottom: 1px solid var(--line-strong);
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto;
+        height: 5px;
+        background: linear-gradient(90deg, var(--accent-dark), var(--gold), var(--blueprint));
       }
 
       .identity {
@@ -74,17 +111,18 @@
       .profile-photo {
         width: 104px;
         height: 104px;
-        border: 3px solid #d8dcc5;
-        border-radius: 999px;
-        box-shadow: 0 12px 28px rgb(47 54 22 / 18%);
+        border: 2px solid rgb(184 134 45 / 55%);
+        border-radius: 24px;
+        box-shadow: 0 16px 32px rgb(17 16 12 / 18%);
         object-fit: cover;
       }
 
       .eyebrow {
         color: var(--gold);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
         font-size: 11px;
         font-weight: 800;
-        letter-spacing: 0.18em;
+        letter-spacing: 0.28em;
         text-transform: uppercase;
       }
 
@@ -97,17 +135,16 @@
 
       h1 {
         margin-top: 8px;
-        font-family: Georgia, "Times New Roman", serif;
         font-size: 46px;
-        font-weight: 700;
-        letter-spacing: -0.05em;
+        font-weight: 850;
+        letter-spacing: -0.065em;
         line-height: 0.95;
       }
 
       .title {
         max-width: 620px;
         margin-top: 12px;
-        color: var(--accent-dark);
+        color: var(--accent);
         font-size: 17px;
         font-weight: 760;
         letter-spacing: -0.02em;
@@ -116,7 +153,7 @@
       .summary {
         max-width: 760px;
         margin-top: 14px;
-        color: #303849;
+        color: #38342d;
         font-size: 14px;
       }
 
@@ -130,9 +167,9 @@
         gap: 9px 18px;
         min-width: 0;
         padding: 11px 14px;
-        background: rgb(255 255 255 / 72%);
-        border: 1px solid rgb(217 223 235 / 88%);
-        border-radius: 16px;
+        background: rgb(255 250 240 / 78%);
+        border: 1px solid rgb(198 181 143 / 58%);
+        border-radius: 18px;
       }
 
       .contact-item {
@@ -143,10 +180,11 @@
       }
 
       .contact-label {
-        color: var(--faint);
+        color: var(--blueprint);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
         font-size: 8.5px;
         font-weight: 800;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.16em;
         text-transform: uppercase;
       }
 
@@ -160,6 +198,8 @@
       }
 
       .content {
+        position: relative;
+        z-index: 1;
         display: grid;
         grid-template-columns: 1fr 275px;
         gap: 34px;
@@ -175,10 +215,11 @@
         align-items: center;
         gap: 10px;
         margin-bottom: 13px;
-        color: var(--accent-dark);
+        color: var(--accent);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
         font-size: 11px;
         font-weight: 900;
-        letter-spacing: 0.15em;
+        letter-spacing: 0.22em;
         text-transform: uppercase;
       }
 
@@ -186,7 +227,7 @@
         content: "";
         height: 1px;
         flex: 1;
-        background: var(--line);
+        background: linear-gradient(90deg, var(--gold), transparent);
       }
 
       h3 {
@@ -209,7 +250,7 @@
         top: 4px;
         width: 7px;
         height: 7px;
-        border: 2px solid var(--accent);
+        border: 2px solid var(--gold);
         border-radius: 999px;
         background: var(--paper);
       }
@@ -221,7 +262,8 @@
 
       .meta {
         margin-top: 3px;
-        color: var(--muted);
+        color: var(--blueprint);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
         font-size: 11.5px;
         font-weight: 650;
       }
@@ -237,12 +279,12 @@
       }
 
       li::marker {
-        color: var(--accent);
+        color: var(--gold);
       }
 
       .project p:last-child {
         margin-top: 5px;
-        color: #303849;
+        color: #38342d;
       }
 
       .rail {
@@ -253,9 +295,10 @@
 
       .card {
         padding: 15px;
-        background: #ffffffbd;
-        border: 1px solid var(--line);
+        background: rgb(251 244 232 / 82%);
+        border: 1px solid rgb(198 181 143 / 52%);
         border-radius: 18px;
+        box-shadow: inset 0 1px 0 rgb(255 255 255 / 55%);
       }
 
       .card h2 {
@@ -282,24 +325,25 @@
         grid-template-columns: 72px 1fr;
         gap: 8px;
         align-items: baseline;
-        color: #313b25;
+        color: #38342d;
         font-size: 11px;
         line-height: 1.25;
       }
 
       .skill-row strong {
-        color: var(--accent-dark);
+        color: var(--blueprint);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
         font-size: 9px;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
       }
 
       .pill {
         padding: 5px 8px;
         background: var(--olive-chip);
-        border: 1px solid #d9ddbd;
+        border: 1px solid rgb(198 181 143 / 58%);
         border-radius: 999px;
-        color: #303816;
+        color: #38342d;
         font-size: 11px;
         font-weight: 760;
       }
@@ -341,14 +385,14 @@
 
       .metric {
         padding: 12px;
-        background: #ffffffd6;
-        border: 1px solid var(--line);
-        border-radius: 16px;
+        background: rgb(255 250 240 / 78%);
+        border: 1px solid rgb(198 181 143 / 58%);
+        border-radius: 18px;
       }
 
       .metric strong {
         display: block;
-        color: var(--accent-dark);
+        color: var(--gold);
         font-size: 18px;
         line-height: 1;
       }
@@ -425,13 +469,22 @@
         .sheet {
           width: auto;
           margin: 0;
+          border: 0;
           box-shadow: none;
+        }
+
+        .sheet::before {
+          display: none;
         }
 
         .hero {
           gap: 9px;
           padding: 0 0 14px;
-          background: #fff;
+          background: #fffaf0;
+        }
+
+        .hero::before {
+          height: 3px;
         }
 
         .identity {
@@ -468,8 +521,8 @@
         .contact-card,
         .card,
         .metric {
-          background: #fff;
-          border-color: #d5dbe7;
+          background: #fffaf0;
+          border-color: #d8ccb6;
           border-radius: 10px;
         }
 
